@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marianna & Vittorio - 10 Giugno 2028</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-peach: #f9d8c4;
+            --soft-peach: #fdf5f0;
+            --accent-peach: #e09f7d;
+            --dark-text: #4a423d;
+            --white: #ffffff;
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-sans: 'Montserrat', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--dark-text);
+            background-color: var(--soft-peach);
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        header {
+            padding: 60px 20px 40px;
+            background-color: var(--white);
+            border-bottom: 1px solid var(--primary-peach);
+        }
+
+        h1 {
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            font-weight: 600;
+            color: var(--dark-text);
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            font-style: italic;
+            color: var(--accent-peach);
+            letter-spacing: 1px;
+        }
+
+        .hero-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .photo-frame {
+            border: 12px solid var(--white);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-radius: 8px;
+            overflow: hidden;
+            background: var(--white);
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .countdown-section {
+            background-color: var(--white);
+            padding: 40px 20px;
+            margin: 40px auto;
+            max-width: 800px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+
+        .countdown-title {
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--dark-text);
+        }
+
+        .timer {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .time-block {
+            background: var(--soft-peach);
+            padding: 15px 20px;
+            border-radius: 6px;
+            min-width: 80px;
+            border: 1px solid var(--primary-peach);
+        }
+
+        .time-block span {
+            display: block;
+        }
+
+        .number {
+            font-family: var(--font-serif);
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: var(--accent-peach);
+        }
+
+        .label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--dark-text);
+        }
+
+        .details-section {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 40px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            margin-bottom: 30px;
+            border-top: 4px solid var(--accent-peach);
+        }
+
+        .card h2 {
+            font-family: var(--font-serif);
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            color: var(--dark-text);
+        }
+
+        .timeline {
+            margin: 30px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .timeline-item {
+            background: var(--soft-peach);
+            padding: 15px 25px;
+            border-radius: 30px;
+            width: 80%;
+            max-width: 400px;
+            border: 1px solid var(--primary-peach);
+            font-size: 1.05rem;
+        }
+
+        .timeline-item strong {
+            color: var(--accent-peach);
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-peach);
+            color: var(--white);
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: background 0.3s ease;
+            margin-top: 15px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #c88765;
+        }
+
+        footer {
+            padding: 40px 20px;
+            background: var(--white);
+            margin-top: 60px;
+            font-family: var(--font-serif);
+            font-size: 1.2rem;
+            color: var(--accent-peach);
+            border-top: 1px solid var(--primary-peach);
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2.2rem; }
+            .timer { gap: 10px; }
+            .time-block { min-width: 65px; padding: 10px; }
+            .number { font-size: 1.6rem; }
+            .timeline-item { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Marianna & Vittorio</h1>
+        <p class="subtitle">Ci sposiamo!</p>
+    </header>
+
+    <div class="hero-container">
+        <div class="photo-frame">
+            <img src="112380.jpg" alt="Marianna e Vittorio">
+        </div>
+    </div>
+
+    <div class="countdown-section">
+        <h2 class="countdown-title">10 Giugno 2028</h2>
+        <div class="timer" id="timer">
+            <div class="time-block">
+                <span class="number" id="days">00</span>
+                <span class="label">Giorni</span>
+            </div>
+            <div class="time-block">
+                <span class="number" id="hours">00</span>
+                <span class="label">Ore</span>
+            </div>
+            <div class="time-block">
+                <span class="number" id="minutes">00</span>
+                <span class="label">Minuti</span>
+            </div>
+            <div class="time-block">
+                <span class="number" id="seconds">00</span>
+                <span class="label">Secondi</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="details-section">
+        <div class="card">
+            <h2>La Cerimonia</h2>
+            <p><strong>Chiesa S. Teresa a Scandiano</strong></p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <strong>16:30</strong> - Arrivo dello Sposo
+                </div>
+                <div class="timeline-item">
+                    <strong>17:00</strong> - Arrivo della Sposa e Inizio Cerimonia
+                </div>
+            </div>
+
+            <a href="https://maps.google.com/?q=Chiesa+S.+Teresa+Scandiano" target="_blank" class="btn">Apri le Mappe</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>Non vediamo l'ora di festeggiare insieme a voi!</p>
+    </footer>
+
+    <script>
+        const targetDate = new Date("June 10, 2028 17:00:00").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+
+            if (difference > 0) {
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                document.getElementById("days").innerText = days < 10 ? '0' + days : days;
+                document.getElementById("hours").innerText = hours < 10 ? '0' + hours : hours;
+                document.getElementById("minutes").innerText = minutes < 10 ? '0' + minutes : minutes;
+                document.getElementById("seconds").innerText = seconds < 10 ? '0' + seconds : seconds;
+            }
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body>
+</html>
